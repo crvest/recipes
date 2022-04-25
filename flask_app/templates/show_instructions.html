@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Welcome {{ one_recipe.user.first_name }}</h1>
+    <!-- dashboard link -->
+    <a href="/dashboard">Dashboard</a>
+    <!-- logout link -->
+    <a href="/logout">Logout</a>
+
+    <!-- displays recipe -->
+    <h2>Name: {{ one_recipe.name }}</h2>
+    <p>Description: {{ one_recipe.description }}</p><br>
+    <p>Ready in Under 30 Minutes?: {{ one_recipe.under30 }}</p><br>
+    <p>Instructions: {{ one_recipe.instructions }}</p><br>
+    <p>Date Made: {{ one_recipe.date_made }}</p><br>
+
+</body>
+</html>
